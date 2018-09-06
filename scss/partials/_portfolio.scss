@@ -19,6 +19,7 @@
     display: block;
     width: 100%;
   }
+
   figcaption {
     position: absolute;
     top: 100%;
@@ -51,7 +52,7 @@
 }
 
 .portfolio-link {
-  color: $white;
+  color: white;
   font-weight: $fw-b;
   font-size: 1.1rem;
   text-decoration: none;
@@ -59,7 +60,7 @@
   align-self: flex-start;
 
   &::after {
-    content: url(../../img/arrow.svg);
+    content: url(../img/arrow-white.svg);
     display: inline-block;
     height: 0.8em;
     width: 0.8em;
@@ -71,7 +72,12 @@
   .portfolio-items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    @include mq {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
+
   .portfolio-item.featured {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;

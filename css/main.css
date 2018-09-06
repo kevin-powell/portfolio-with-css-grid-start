@@ -269,6 +269,9 @@ body {
   line-height: 1.6;
   background: #ffffff;
   font-size: 0.875rem; }
+  @media (min-width: 50em) {
+    body {
+      font-size: 1.125rem; } }
 
 h1,
 h2,
@@ -283,6 +286,9 @@ h1 {
   color: #03afc2;
   line-height: 1;
   font-size: 3.125rem; }
+  @media (min-width: 50em) {
+    h1 {
+      font-size: 4.25; } }
 
 h2 {
   font-size: 2rem;
@@ -292,6 +298,9 @@ h2 {
   line-height: 1;
   font-family: "Six Caps", sans-serif;
   font-weight: 400; }
+  @media (min-width: 50em) {
+    h2 {
+      font-size: 3rem; } }
 
 .welcome {
   background-image: url(../../img/header-bg.png);
@@ -307,6 +316,9 @@ h2 {
     color: #223843;
     line-height: 2;
     text-align: center; }
+    @media (min-width: 50em) {
+      .welcome h1 {
+        font-size: 2.5vw; } }
     .welcome h1 span {
       font-size: 5.5rem;
       letter-spacing: 0.15em;
@@ -316,6 +328,9 @@ h2 {
       font-family: "Six Caps", sans-serif;
       font-weight: 400;
       display: block; }
+      @media (min-width: 50em) {
+        .welcome h1 span {
+          font-size: 10vw; } }
     .welcome h1::before, .welcome h1::after {
       content: '';
       display: block;
@@ -386,17 +401,31 @@ h2 {
 @supports (display: grid) {
   .about-me {
     display: grid;
-    grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end]; }
+    grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+    grid-column-gap: 0.5em; }
   .about-img {
     grid-column: port / img;
     grid-row: 1 / 2; }
+    @media (min-width: 50em) {
+      .about-img {
+        grid-row: 1 / 4; } }
   .about-title {
     grid-column: name / port;
     grid-row: 1 / 2;
     align-self: end; }
   .about-subtitle,
   .about-text {
-    grid-column: port / port; } }
+    grid-column: port / port; }
+    @media (min-width: 50em) {
+      .about-subtitle,
+      .about-text {
+        grid-column: image-end / port-end; } } }
+
+.about-subtitle {
+  grid-row: 2 / 3; }
+
+.about-text {
+  grid-row: 3 / 4; }
 
 .portfolio {
   text-align: center;
@@ -443,14 +472,14 @@ h2 {
   display: none; }
 
 .portfolio-link {
-  color: #ffffff;
+  color: white;
   font-weight: 900;
   font-size: 1.1rem;
   text-decoration: none;
   border-bottom: 3px solid #ffffff;
   align-self: flex-start; }
   .portfolio-link::after {
-    content: url(../../img/arrow.svg);
+    content: url(../img/arrow-white.svg);
     display: inline-block;
     height: 0.8em;
     width: 0.8em;
@@ -460,6 +489,9 @@ h2 {
   .portfolio-items {
     display: grid;
     grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 50em) {
+      .portfolio-items {
+        grid-template-columns: repeat(4, 1fr); } }
   .portfolio-item.featured {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2; }
@@ -479,6 +511,23 @@ h2 {
 form {
   display: flex;
   flex-direction: column; }
+  @supports (display: grid) {
+    @media (min-width: 50em) {
+      form {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 1em;
+        grid-template-areas: 'name     email' 'message  message' '.        button'; }
+        form .name {
+          grid-area: name; }
+        form .email {
+          grid-area: email; }
+        form .message {
+          grid-area: message; }
+          form .message textarea {
+            height: 10em; }
+        form .button {
+          grid-area: button; } } }
 
 label {
   display: block;
@@ -491,9 +540,14 @@ textarea {
   display: block;
   padding: 0.75em;
   width: 100%;
+  min-width: 15em;
   background: #fafafa;
   border: 1px solid #e8e9e8;
   font-size: 1.2rem; }
+
+textarea {
+  resize: vertical;
+  outline: none; }
 
 .button {
   display: inline-block;
