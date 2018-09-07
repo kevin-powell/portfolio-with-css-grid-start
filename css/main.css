@@ -268,7 +268,8 @@ body {
   font-family: "Merriweather", serif;
   line-height: 1.6;
   background: #ffffff;
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+  overflow-x: hidden; }
   @media (min-width: 50em) {
     body {
       font-size: 1.125rem; } }
@@ -309,7 +310,8 @@ h2 {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  position: relative; }
   .welcome h1 {
     font-size: 1.5rem;
     font-weight: 400;
@@ -341,6 +343,73 @@ h2 {
       margin: 0 auto 2em; }
     .welcome h1::after {
       margin: 2em auto 0; }
+
+.menu-button {
+  position: absolute;
+  top: 3em;
+  left: 3em;
+  background: transparaent;
+  border: 0; }
+
+nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 15%;
+  z-index: 10;
+  transform: translateX(-100%);
+  transition: transform ease-out 250ms; }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: stretch;
+  background: #03afc2; }
+
+nav li {
+  text-align: center; }
+  nav li:not(:last-of-type) {
+    border-bottom: 1px solid #223843; }
+
+nav li:hover {
+  background: rgba(34, 56, 67, 0.5); }
+
+nav a {
+  display: inline-block;
+  font-size: 4rem;
+  letter-spacing: 0.15em;
+  color: #223843;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: "Six Caps", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  padding: calc(100vh / 8) 0;
+  line-height: 0;
+  width: 100%; }
+
+.close-icon {
+  display: none; }
+
+.nav-is-open {
+  height: 100vh;
+  overflow-y: hidden; }
+  .nav-is-open nav {
+    transform: translateX(0); }
+  .nav-is-open .container-all {
+    transform: translateX(80%); }
+  .nav-is-open .hamburger {
+    display: none; }
+  .nav-is-open .close-icon {
+    display: block; }
+  .nav-is-open .menu-button {
+    transform: translateX(-25%); }
 
 .intro {
   display: flex;
@@ -479,7 +548,7 @@ h2 {
   border-bottom: 3px solid #ffffff;
   align-self: flex-start; }
   .portfolio-link::after {
-    content: url(../img/arrow-white.svg);
+    content: url(../img/arrow.svg);
     display: inline-block;
     height: 0.8em;
     width: 0.8em;

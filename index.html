@@ -11,123 +11,157 @@
 
 <body>
 
-  <div class="welcome">
-    <h1>Welcome to my <span>Portfolio</span></h1>
+  <nav>
+    <ul>
+      <li><a href="#home">home</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#portfolio">portfolio</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container-all">
+
+    <div class="welcome" id="home">
+      <button class="menu-button">
+        <svg class="hamburger" x="0px" y="0px" viewBox="0 0 30 17" height="17" width="30">
+          <g transform="translate(-15 -15)">
+            <rect x="15" y="16" class="st0" width="30" height="2" />
+          </g>
+          <g transform="translate(-15 -9)">
+            <rect x="15" y="16" class="st0" width="30" height="2" />
+          </g>
+          <g transform="translate(-15 -3)">
+            <rect x="15" y="16" class="st0" width="30" height="2" />
+          </g>
+        </svg>
+        <svg class="close-icon" x="0px" y="0px" viewBox="0 0 30 17" height="17" width="30">
+          <g transform="translate(-15 -15)">
+            <polygon class="st0" points="31.2,23.5 37,29.3 35.8,30.5 30,24.7 24.2,30.5 23,29.3 28.8,23.5 23,17.7 24.2,16.5 30,22.3 
+           35.8,16.5 37,17.7 	" />
+          </g>
+        </svg>
+      </button>
+      <h1>Welcome to my <span>Portfolio</span></h1>
+    </div>
+
+    <section class="intro">
+      <div class="intro-left">
+        <img src="img/welcome-01.png" alt="laptop on wood table">
+      </div>
+      <div class="intro-middle">
+        <h2>Making it happen</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum minima rem autem. Ad, quod dolore?</p>
+      </div>
+      <div class="intro-right">
+        <img src="img/welcome-02.png" alt="two computers and a laptop on a table">
+      </div>
+    </section>
+
+    <section class="about-me" id="about">
+      <img class="about-img" src="img/joe-portfolio.png" alt="A picture of Joe Portfolio">
+      <h1 class="about-title">Joe Portfolio</h1>
+      <h2 class="about-subtitle">Designer and Developer</h2>
+      <div class="about-text">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quam aut placeat, illo minus cumque est
+          similique
+          iusto quo debitis pariatur. Dolorem, delectus a corporis perspiciatis voluptate provident harum
+          necessitatibus.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere laudantium quod perferendis iusto quo veniam
+          repudiandae
+          reiciendis nemo tempora! Alias tempore temporibus veritatis minus voluptatem, fuga assumenda dolorum optio
+          esse.</p>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <h1>My Work</h1>
+      <div class="portfolio-items">
+        <!-- Portfolio Item 1 -->
+        <figure class="portfolio-item featured">
+          <img class="portfolio-image" src="img/portfolio-01.jpg" alt="Portfolio Item">
+          <figcaption>
+            <h2 class="portfolio-title">Project Name</h2>
+            <p class="portfolio-desc">A short descripstion could go here</p>
+            <a href="" class="portfolio-link">More Info</a>
+          </figcaption>
+        </figure>
+
+        <!-- Portfolio Item 2 -->
+        <figure class="portfolio-item">
+          <img class="portfolio-image" src="img/portfolio-02.jpg" alt="Portfolio Item">
+          <figcaption>
+            <h2 class="portfolio-title">Project Name</h2>
+            <p class="portfolio-desc">A short descripstion could go here</p>
+            <a href="" class="portfolio-link">More Info</a>
+          </figcaption>
+        </figure>
+
+        <!-- Portfolio Item 3 -->
+        <figure class="portfolio-item">
+          <img class="portfolio-image" src="img/portfolio-03.jpg" alt="Portfolio Item">
+          <figcaption>
+            <h2 class="portfolio-title">Project Name</h2>
+            <p class="portfolio-desc">A short descripstion could go here</p>
+            <a href="" class="portfolio-link">More Info</a>
+          </figcaption>
+        </figure>
+
+        <!-- Portfolio Item 4 -->
+        <figure class="portfolio-item">
+          <img class="portfolio-image" src="img/portfolio-04.jpg" alt="Portfolio Item">
+          <figcaption>
+            <h2 class="portfolio-title">Project Name</h2>
+            <p class="portfolio-desc">A short descripstion could go here</p>
+            <a href="" class="portfolio-link">More Info</a>
+          </figcaption>
+        </figure>
+
+        <!-- Portfolio Item 5 -->
+        <figure class="portfolio-item">
+          <img class="portfolio-image" src="img/portfolio-05.jpg" alt="Portfolio Item">
+          <figcaption>
+            <h2 class="portfolio-title">Project Name</h2>
+            <p class="portfolio-desc">A short descripstion could go here</p>
+            <a href="" class="portfolio-link">More Info</a>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h1>Contact me</h1>
+      <form action="">
+        <label class="name" class="name">Name:
+          <input type="text" id="name">
+        </label>
+
+        <label class="email" class="email">Email:
+          <input type="email" id="email">
+        </label>
+
+        <label message="message" class="message">Message:
+          <textarea name="" id="message"></textarea>
+        </label>
+
+        <input class="button form-button" type="submit" value="SEND">
+
+      </form>
+    </section>
+
+    <footer>
+      <p>Follow me on social media</p>
+      <div class="social-icons">
+        <img src="img/twitter.svg" alt="twitter" class="social-icon">
+        <img src="img/instagram.svg" alt="instagram" class="social-icon">
+        <img src="img/github.svg" alt="github" class="social-icon">
+      </div>
+      <p class="copyright">Copyright 2017 Joe Portfolio</p>
+    </footer>
   </div>
 
-  <section class="intro">
-    <div class="intro-left">
-      <img src="img/welcome-01.png" alt="laptop on wood table">
-    </div>
-    <div class="intro-middle">
-      <h2>Making it happen</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum minima rem autem. Ad, quod dolore?</p>
-    </div>
-    <div class="intro-right">
-      <img src="img/welcome-02.png" alt="two computers and a laptop on a table">
-    </div>
-  </section>
-
-  <section class="about-me">
-    <img class="about-img" src="img/joe-portfolio.png" alt="A picture of Joe Portfolio">
-    <h1 class="about-title">Joe Portfolio</h1>
-    <h2 class="about-subtitle">Designer and Developer</h2>
-    <div class="about-text">
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quam aut placeat, illo minus cumque est
-        similique
-        iusto quo debitis pariatur. Dolorem, delectus a corporis perspiciatis voluptate provident harum necessitatibus.
-      </p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere laudantium quod perferendis iusto quo veniam
-        repudiandae
-        reiciendis nemo tempora! Alias tempore temporibus veritatis minus voluptatem, fuga assumenda dolorum optio
-        esse.</p>
-    </div>
-  </section>
-
-  <section class="portfolio" id="portfolio">
-    <h1>My Work</h1>
-    <div class="portfolio-items">
-      <!-- Portfolio Item 1 -->
-      <figure class="portfolio-item featured">
-        <img class="portfolio-image" src="img/portfolio-01.jpg" alt="Portfolio Item">
-        <figcaption>
-          <h2 class="portfolio-title">Project Name</h2>
-          <p class="portfolio-desc">A short descripstion could go here</p>
-          <a href="" class="portfolio-link">More Info</a>
-        </figcaption>
-      </figure>
-
-      <!-- Portfolio Item 2 -->
-      <figure class="portfolio-item">
-        <img class="portfolio-image" src="img/portfolio-02.jpg" alt="Portfolio Item">
-        <figcaption>
-          <h2 class="portfolio-title">Project Name</h2>
-          <p class="portfolio-desc">A short descripstion could go here</p>
-          <a href="" class="portfolio-link">More Info</a>
-        </figcaption>
-      </figure>
-
-      <!-- Portfolio Item 3 -->
-      <figure class="portfolio-item">
-        <img class="portfolio-image" src="img/portfolio-03.jpg" alt="Portfolio Item">
-        <figcaption>
-          <h2 class="portfolio-title">Project Name</h2>
-          <p class="portfolio-desc">A short descripstion could go here</p>
-          <a href="" class="portfolio-link">More Info</a>
-        </figcaption>
-      </figure>
-
-      <!-- Portfolio Item 4 -->
-      <figure class="portfolio-item">
-        <img class="portfolio-image" src="img/portfolio-04.jpg" alt="Portfolio Item">
-        <figcaption>
-          <h2 class="portfolio-title">Project Name</h2>
-          <p class="portfolio-desc">A short descripstion could go here</p>
-          <a href="" class="portfolio-link">More Info</a>
-        </figcaption>
-      </figure>
-
-      <!-- Portfolio Item 5 -->
-      <figure class="portfolio-item">
-        <img class="portfolio-image" src="img/portfolio-05.jpg" alt="Portfolio Item">
-        <figcaption>
-          <h2 class="portfolio-title">Project Name</h2>
-          <p class="portfolio-desc">A short descripstion could go here</p>
-          <a href="" class="portfolio-link">More Info</a>
-        </figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <h1>Contact me</h1>
-    <form action="">
-      <label class="name" class="name">Name:
-        <input type="text" id="name">
-      </label>
-
-      <label class="email" class="email">Email:
-        <input type="email" id="email">
-      </label>
-
-      <label message="message" class="message">Message:
-        <textarea name="" id="message"></textarea>
-      </label>
-
-      <input class="button form-button" type="submit" value="SEND">
-
-    </form>
-  </section>
-
-  <footer>
-    <p>Follow me on social media</p>
-    <div class="social-icons">
-      <img src="img/twitter.svg" alt="twitter" class="social-icon">
-      <img src="img/instagram.svg" alt="instagram" class="social-icon">
-      <img src="img/github.svg" alt="github" class="social-icon">
-    </div>
-    <p class="copyright">Copyright 2017 Joe Portfolio</p>
-  </footer>
+  <script src="js/nav.js"></script>
 
 </body>
 
